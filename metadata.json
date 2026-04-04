@@ -1,0 +1,7 @@
+{
+  "name": "AllergyCare",
+  "description": "Plataforma inteligente para el control de alergias con recomendaciones personalizadas por IA y comunidad global.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
