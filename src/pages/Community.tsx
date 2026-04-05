@@ -136,9 +136,11 @@ export const Community = () => {
                 </button>
                 <button 
                   onClick={() => {
-                    console.log('Compartiendo post:', post.id);
-                    // Placeholder for share logic
-                    navigator.clipboard.writeText(`${window.location.origin}/community?post=${post.id}`);
+                    const baseUrl = window.location.hostname.includes('web.app') 
+                      ? window.location.origin 
+                      : 'https://gen-lang-client-0759773731.web.app';
+                    const shareUrl = `${baseUrl}/community?post=${post.id}`;
+                    navigator.clipboard.writeText(shareUrl);
                     alert('¡Enlace del post copiado al portapapeles!');
                   }}
                   className="flex items-center gap-1 hover:text-sky-500 transition-colors ml-auto"

@@ -10,6 +10,9 @@ export default defineConfig(({mode}) => {
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GOOGLE_API_KEY || env.GEMINI_API_KEY),
     },
+    build: {
+      outDir: 'dist/build',
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
